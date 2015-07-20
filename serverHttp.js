@@ -35,7 +35,7 @@ router.post("/country/:country/hotel", function (req, res) {
 	var countryName = req.params.country;	
 	var hotelName = req.body.hotelName;
 	var hotelDescription = req.body.hotelDescription;	
-	db.addHotel(countryName, hotelName, hotelDescription);
+	db.addHotelInCountry(countryName, hotelName, hotelDescription);
 });
 
 router.get("/hotel/:id", function (req, res) {	
